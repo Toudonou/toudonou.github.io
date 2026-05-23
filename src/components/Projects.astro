@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 ---
 
@@ -10,7 +11,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Projects
+              Projets
             </h2>
             <div
               class="w-[75px] h-[5px] mt-2 rounded-full"
@@ -64,7 +65,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                             class="text-sm font-mono"
                             style={{ color: siteConfig.accentColor }}
                           >
-                            0{index + 1}
+                            0{String(index + 1).padStart(1, "0")}
                           </span>
                           <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
                             {project.name}
@@ -95,6 +96,34 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                   </div>
                 );
               })}
+            </div>
+            <div class="mt-10 flex justify-start">
+              <a
+                href={siteConfig.social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center gap-3 rounded-full border border-gray-900/15 bg-white px-6 py-2.5 text-sm sm:text-base font-semibold text-gray-900 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-0.5 hover:border-gray-900/40 hover:bg-gray-50 hover:shadow-md"
+              >
+                Plus de projets
+                <span
+                  class="inline-flex h-7 w-7 items-center justify-center rounded-full text-white transition-transform duration-300 group-hover:translate-x-0.5"
+                  style={`background-color: ${siteConfig.accentColor}`}
+                >
+                  <svg
+                    class="h-3.5 w-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 17L17 7M17 7H7M17 7V17"
+                    />
+                  </svg>
+                </span>
+              </a>
             </div>
           </div>
         </div>

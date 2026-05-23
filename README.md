@@ -1,5 +1,3 @@
-<img width="1943" height="1093" alt="image" src="https://github.com/user-attachments/assets/cc2ff955-17c2-48c7-81c8-479a0f061850" />
-
 # DevPortfolio Template
 
 A modern, minimalist portfolio template built with Astro and Tailwind CSS. Perfect for developers looking to showcase their skills, experience, and projects in a clean, professional way.
@@ -36,7 +34,7 @@ The template is designed to be easily customizable through the `src/config.ts` f
 - **Skills**: List of technical skills
 - **Projects**: Project showcase with descriptions and links
 - **Experience**: Work history with bullet points
-- **Education**: Educational background and achievements
+- **Education**: Educational background and details
 
 If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely.
 
@@ -107,7 +105,7 @@ education: [
     school: "University Name",
     degree: "Bachelor of Science in Computer Science",
     dateRange: "2014 - 2018",
-    achievements: [
+    details: [
       "Graduated Magna Cum Laude with 3.8 GPA",
       "Dean's List all semesters",
       "President of Computer Science Club"
