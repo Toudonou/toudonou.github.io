@@ -57,7 +57,7 @@ export const siteConfig = {
       dateRange: "2023 - 2026",
       details: [
         "Spécialité Intelligence Artificielle",
-        "Alternance en tant que développeur backend .NET",
+        "Alternant développeur backend .NET",
       ],
     },
     {
