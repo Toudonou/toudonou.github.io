@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [master]
+    branches: [copilot/fix-translation-inconsistency]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/copilot/fix-translation-inconsistency'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,6 +36,7 @@ jobs:
           path: ./dist
 
   deploy:
+    if: github.ref == 'refs/heads/copilot/fix-translation-inconsistency'
     runs-on: ubuntu-latest
     needs: build
     environment:
