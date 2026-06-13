@@ -8,6 +8,10 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = translations[lang];
+const copyrightText =
+  lang === "fr"
+    ? "Tous droits réservés."
+    : "All rights reserved.";
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
@@ -141,7 +145,7 @@ const t = translations[lang];
         </nav> -->
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}
-          {siteConfig.name}. All rights reserved.
+          {siteConfig.name}. {copyrightText}
         </p>
       </div>
     </div>
