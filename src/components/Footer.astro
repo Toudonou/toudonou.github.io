@@ -8,10 +8,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = translations[lang];
-const copyrightText =
-  lang === "fr"
-    ? "Tous droits réservés."
-    : "All rights reserved.";
+const copyrightText = t.rightsReserved;
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">

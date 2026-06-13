@@ -8,8 +8,8 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = translations[lang];
-const greeting = lang === "fr" ? "Bonjour!" : "Hello!";
-const namePrefix = lang === "fr" ? "Je suis" : "I'm";
+const greeting = t.greeting;
+const namePrefix = t.namePrefix;
 ---
 
 <div
