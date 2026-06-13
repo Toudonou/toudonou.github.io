@@ -1,0 +1,47 @@
+---
+import "../../styles/global.css";
+import { siteConfig, translations } from "../../config";
+import { isLanguage, languages, type Language } from "../../i18n";
+import Header from "../../components/Header.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Experience from "../../components/Experience.astro";
+import Projects from "../../components/Projects.astro";
+import Education from "../../components/Education.astro";
+import Footer from "../../components/Footer.astro";
+
+export function getStaticPaths() {
+  return languages.map((lang) => ({ params: { lang } }));
+}
+
+const langParam = Astro.params.lang;
+
+if (!isLanguage(langParam)) {
+  throw new Error(`Unsupported language: ${langParam}`);
+}
+
+const lang: Language = langParam;
+const t = translations[lang];
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={t.description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{`${siteConfig.name} | ${t.title}`}</title>
+  </head>
+  <body class="bg-white text-gray-900">
+    <Header lang={lang} />
+    <main>
+      <Hero lang={lang} />
+      <About lang={lang} />
+      <Experience lang={lang} />
+      <Projects lang={lang} />
+      <Education lang={lang} />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>
