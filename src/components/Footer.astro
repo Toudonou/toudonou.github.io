@@ -1,9 +1,13 @@
 ---
-import { siteConfig } from "../config";
+import { siteConfig, translations } from "../config";
+import { type Language } from "../i18n";
 
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = translations[lang];
 ---
 
 <footer class="relative bg-gray-50 border-t border-gray-200">
@@ -16,7 +20,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           {siteConfig.name}
         </h3>
         <p class="text-base text-gray-600">
-          {siteConfig.title}
+          {t.title}
         </p>
         <div class="flex gap-x-6">
           <a

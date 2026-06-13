@@ -1,7 +1,14 @@
 ---
-import { siteConfig } from "../config";
+import { siteConfig, translations } from "../config";
+import { type Language } from "../i18n";
 
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = translations[lang];
+const hasProjects = t.projects && t.projects.length > 0;
 ---
 
 {
@@ -11,7 +18,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Projets
+              {t.navItems.projects}
             </h2>
             <div
               class="w-[75px] h-[5px] mt-2 rounded-full"
@@ -21,7 +28,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 
           <div class="lg:col-span-8">
             <div class="space-y-8">
-              {siteConfig.projects.map((project, index) => {
+              {t.projects.map((project, index) => {
                 const Component = project.link ? "a" : "div";
                 const linkProps = project.link
                   ? {

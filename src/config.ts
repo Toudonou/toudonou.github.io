@@ -1,7 +1,5 @@
 export const siteConfig = {
   name: "Oswald NOUNAGNON",
-  title: "Développeur Backend & Étudiant Ingénieur IA",
-  description: "Portfolio d'Oswald NOUNAGNON - Développeur Backend .NET",
   accentColor: "#1d4ed8",
   social: {
     email: "hnounagnonoswald@gmail.com",
@@ -9,68 +7,155 @@ export const siteConfig = {
     twitter: "",
     github: "https://github.com/Toudonou",
   },
-  aboutMe:
-    "Étudiant ingénieur en informatique (spécialité IA) à l'EILCO, alternant développeur backend .NET chez CGI Finance - SG. Passionné par les langages systèmes comme le Rust et le C++. Rigoureux et déterminé, je recherche un CDI à partir de septembre 2026. Mobile partout en France et ouvert à l'international.",
-  skills: ["C/C++", "Rust", "C#", "Java", "Python", "SQL", "Bash", ".NET", "Docker", "Git", "Azure DevOps", "Agile (SAFe)"],
-  projects: [
-    {
-      name: "Zeno",
-      description:
-        "Bot d'échecs développé en Rust avec algorithme Alpha-Bêta, Move Ordering, Bitboards et tables de transposition pour la mise en cache des positions",
-      link: "https://github.com/Toudonou/zeno",
-      skills: ["Rust", "Algorithmes", "Alpha-Bêta"],
+};
+
+export const translations = {
+  fr: {
+    title: "Développeur Backend & Étudiant Ingénieur IA",
+    description: "Portfolio d'Oswald NOUNAGNON - Développeur Backend .NET",
+    aboutMe:
+      "Étudiant ingénieur en informatique (spécialité IA) à l'EILCO, alternant développeur backend .NET chez CGI Finance - SG. Passionné par les langages systèmes comme le Rust et le C++. Rigoureux et déterminé, je recherche un CDI à partir de septembre 2026. Mobile partout en France et ouvert à l'international.",
+    skills: ["C/C++", "Rust", "C#", "Java", "Python", "SQL", "Bash", ".NET", "Docker", "Git", "Azure DevOps", "Agile (SAFe)"],
+    navItems: {
+      about: "À propos",
+      experience: "Expériences",
+      projects: "Projets",
+      education: "Formations",
     },
-    {
-      name: "Raccourcisseur d'URL",
-      description:
-        "Application web pour le raccourcissement et la redirection de liens avec encodage Base62 pour générer des clés uniques et courtes",
-      link: "https://github.com/Toudonou/url-shortener",
-      skills: ["C#", ".NET", "HTML/CSS", "API REST"],
+    projects: [
+      {
+        name: "Zeno",
+        description:
+          "Bot d'échecs développé en Rust avec algorithme Alpha-Bêta, Move Ordering, Bitboards et tables de transposition pour la mise en cache des positions",
+        link: "https://github.com/Toudonou/zeno",
+        skills: ["Rust", "Algorithmes", "Alpha-Bêta"],
+      },
+      {
+        name: "Raccourcisseur d'URL",
+        description:
+          "Application web pour le raccourcissement et la redirection de liens avec encodage Base62 pour générer des clés uniques et courtes",
+        link: "https://github.com/Toudonou/url-shortener",
+        skills: ["C#", ".NET", "HTML/CSS", "API REST"],
+      },
+      {
+        name: "Huffman Encoding CLI",
+        description:
+          "Outil de compression de fichiers texte basé sur l'encodage entropique avec arbre binaire et réduction significative de taille",
+        link: "https://github.com/Toudonou/huffman-encoding-cli",
+        skills: ["Rust", "Compression", "Algorithmes"],
+      },
+    ],
+    experience: [
+      {
+        company: "CGI Finance - SG",
+        title: "Alternant Développeur Backend .NET",
+        dateRange: "Septembre 2024 - Septembre 2026",
+        bullets: [
+          "Développement de services backend en .NET et .NET Core",
+          "Maintien et évolution d'un espace client en production",
+          "Migration et modernisation d'applications legacy",
+          "Observabilité et supervision applicative avec DataDog",
+          "Évolution dans un contexte Agile (SAFe)",
+          "Écriture de documentation complète pour les systèmes applicatifs",
+        ],
+      },
+    ],
+    education: [
+      {
+        school: "École d'Ingénieur du Littoral Côte d'Opale (EILCO)",
+        degree: "Formation d'Ingénieur en Informatique",
+        dateRange: "2023 - 2026",
+        details: [
+          "Spécialité Intelligence Artificielle",
+          "Alternant développeur backend .NET",
+        ],
+      },
+      {
+        school: "Institut de Mathématiques et de Sciences Physiques (IMSP)",
+        degree: "Licence Informatique",
+        dateRange: "2022 - 2023",
+        details: ["Création d'une application de gestion de cours en PHP - Laravel"],
+      },
+      {
+        school: "Institut de Mathématiques et de Sciences Physiques (IMSP)",
+        degree: "Classes Préparatoires aux Grandes Écoles",
+        dateRange: "2020 - 2022",
+        details: ["MPSI"],
+      },
+    ],
+  },
+  en: {
+    title: "Backend Developer & AI Engineering Student",
+    description: "Portfolio of Oswald NOUNAGNON - Backend Developer .NET",
+    aboutMe:
+      "Computer engineering student (AI specialization) at EILCO, alternating backend developer .NET at CGI Finance - SG. Passionate about systems languages like Rust and C++. Rigorous and determined, I am looking for a permanent position from September 2026. Mobile throughout France and open to international opportunities.",
+    skills: ["C/C++", "Rust", "C#", "Java", "Python", "SQL", "Bash", ".NET", "Docker", "Git", "Azure DevOps", "Agile (SAFe)"],
+    navItems: {
+      about: "About",
+      experience: "Experience",
+      projects: "Projects",
+      education: "Education",
     },
-    {
-      name: "Huffman Encoding CLI",
-      description:
-        "Outil de compression de fichiers texte basé sur l'encodage entropique avec arbre binaire et réduction significative de taille",
-      link: "https://github.com/Toudonou/huffman-encoding-cli",
-      skills: ["Rust", "Compression", "Algorithmes"],
-    },
-  ],
-  experience: [
-    {
-      company: "CGI Finance - SG",
-      title: "Alternant Développeur Backend .NET",
-      dateRange: "Septembre 2024 - Septembre 2026",
-      bullets: [
-        "Développement de services backend en .NET et .NET Core",
-        "Maintien et évolution d'un espace client en production",
-        "Migration et modernisation d'applications legacy",
-        "Observabilité et supervision applicative avec DataDog",
-        "Évolution dans un contexte Agile (SAFe)",
-        "Écriture de documentation complète pour les systèmes applicatifs",
-      ],
-    },
-  ],
-  education: [
-    {
-      school: "École d'Ingénieur du Littoral Côte d'Opale (EILCO)",
-      degree: "Formation d'Ingénieur en Informatique",
-      dateRange: "2023 - 2026",
-      details: [
-        "Spécialité Intelligence Artificielle",
-        "Alternant développeur backend .NET",
-      ],
-    },
-    {
-      school: "Institut de Mathématiques et de Sciences Physiques (IMSP)",
-      degree: "Licence Informatique",
-      dateRange: "2022 - 2023",
-      details: ["Création d'une application de gestion de cours en PHP - Laravel"],
-    },
-    {
-      school: "Institut de Mathématiques et de Sciences Physiques (IMSP)",
-      degree: "Classes Préparatoires aux Grandes Écoles",
-      dateRange: "2020 - 2022",
-      details: ["MPSI"],
-    },
-  ],
+    projects: [
+      {
+        name: "Zeno",
+        description:
+          "Chess bot developed in Rust with Alpha-Beta algorithm, Move Ordering, Bitboards and transposition tables for position caching",
+        link: "https://github.com/Toudonou/zeno",
+        skills: ["Rust", "Algorithms", "Alpha-Beta"],
+      },
+      {
+        name: "URL Shortener",
+        description:
+          "Web application for shortening and redirecting links with Base62 encoding to generate unique and short keys",
+        link: "https://github.com/Toudonou/url-shortener",
+        skills: ["C#", ".NET", "HTML/CSS", "REST API"],
+      },
+      {
+        name: "Huffman Encoding CLI",
+        description:
+          "Text file compression tool based on entropy encoding with binary tree and significant size reduction",
+        link: "https://github.com/Toudonou/huffman-encoding-cli",
+        skills: ["Rust", "Compression", "Algorithms"],
+      },
+    ],
+    experience: [
+      {
+        company: "CGI Finance - SG",
+        title: "Apprentice Backend Developer .NET",
+        dateRange: "September 2024 - September 2026",
+        bullets: [
+          "Development of backend services in .NET and .NET Core",
+          "Maintenance and evolution of a client space in production",
+          "Migration and modernization of legacy applications",
+          "Application observability and supervision with DataDog",
+          "Evolution in an Agile context (SAFe)",
+          "Writing complete documentation for application systems",
+        ],
+      },
+    ],
+    education: [
+      {
+        school: "École d'Ingénieur du Littoral Côte d'Opale (EILCO)",
+        degree: "Engineering Degree in Computer Science",
+        dateRange: "2023 - 2026",
+        details: [
+          "Specialization in Artificial Intelligence",
+          "Alternating backend developer .NET",
+        ],
+      },
+      {
+        school: "Institut de Mathématiques et de Sciences Physiques (IMSP)",
+        degree: "Bachelor of Computer Science",
+        dateRange: "2022 - 2023",
+        details: ["Development of a course management application in PHP - Laravel"],
+      },
+      {
+        school: "Institut de Mathématiques et de Sciences Physiques (IMSP)",
+        degree: "Preparatory Classes for Great Schools",
+        dateRange: "2020 - 2022",
+        details: ["MPSI"],
+      },
+    ],
+  },
 };

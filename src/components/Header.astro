@@ -1,9 +1,18 @@
 ---
-import { siteConfig } from "../config";
+import { siteConfig, translations } from "../config";
+import { type Language } from "../i18n";
 
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const t = translations[lang];
+const otherLang: Language = lang === "fr" ? "en" : "fr";
+
+const hasProjects = t.projects && t.projects.length > 0;
+const hasExperience = t.experience && t.experience.length > 0;
+const hasEducation = t.education && t.education.length > 0;
 ---
 
 <header
@@ -14,34 +23,42 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     <ul class="flex items-center gap-8 justify-center">
       <li>
         <a
-          href="#about"
+          href={`/${lang}#about`}
           class="text-gray-700 hover:text-black transition-colors font-medium"
         >
-          À propos
+          {t.navItems.about}
         </a>
       </li>
       <li>
         <a
-          href="#experience"
+          href={`/${lang}#experience`}
           class="text-gray-700 hover:text-black transition-colors font-medium"
         >
-          Expériences
+          {t.navItems.experience}
         </a>
       </li>
       <li>
         <a
-          href="#projects"
+          href={`/${lang}#projects`}
           class="text-gray-700 hover:text-black transition-colors font-medium"
         >
-          Projets
+          {t.navItems.projects}
         </a>
       </li>
       <li>
         <a
-          href="#education"
+          href={`/${lang}#education`}
           class="text-gray-700 hover:text-black transition-colors font-medium"
         >
-          Formations
+          {t.navItems.education}
+        </a>
+      </li>
+      <li class="ml-4 pl-4 border-l border-gray-300">
+        <a
+          href={`/${otherLang}/`}
+          class="px-3 py-1 rounded border border-gray-700 text-gray-700 hover:bg-gray-100 transition-colors font-medium text-sm"
+        >
+          {otherLang.toUpperCase()}
         </a>
       </li>
     </ul>
