@@ -13,6 +13,10 @@ export const translations = {
   fr: {
     title: "Développeur Backend & Étudiant Ingénieur IA",
     description: "Portfolio d'Oswald NOUNAGNON - Développeur Backend .NET",
+    greeting: "Bonjour!",
+    namePrefix: "Je suis",
+    moreProjects: "Plus de projets",
+    rightsReserved: "Tous droits réservés.",
     aboutMe:
       "Étudiant ingénieur en informatique (spécialité IA) à l'EILCO, alternant développeur backend .NET chez CGI Finance - SG. Passionné par les langages systèmes comme le Rust et le C++. Rigoureux et déterminé, je recherche un CDI à partir de septembre 2026. Mobile partout en France et ouvert à l'international.",
     skills: ["C/C++", "Rust", "C#", "Java", "Python", "SQL", "Bash", ".NET", "Docker", "Git", "Azure DevOps", "Agile (SAFe)"],
@@ -87,6 +91,10 @@ export const translations = {
   en: {
     title: "Backend Developer & AI Engineering Student",
     description: "Portfolio of Oswald NOUNAGNON - Backend Developer .NET",
+    greeting: "Hello!",
+    namePrefix: "I'm",
+    moreProjects: "More projects",
+    rightsReserved: "All rights reserved.",
     aboutMe:
       "Computer engineering student (AI specialization) at EILCO, alternating backend developer .NET at CGI Finance - SG. Passionate about systems languages like Rust and C++. Rigorous and determined, I am looking for a permanent position from September 2026. Mobile throughout France and open to international opportunities.",
     skills: ["C/C++", "Rust", "C#", "Java", "Python", "SQL", "Bash", ".NET", "Docker", "Git", "Azure DevOps", "Agile (SAFe)"],
